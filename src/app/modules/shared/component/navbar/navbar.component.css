@@ -2,3 +2,106 @@
     flex: 1 1 auto;
   }
   
+
+/* Estilos para la barra de herramientas */
+mat-toolbar {
+  background-color: #CC9B60; /* Fondo cálido */
+  color: #3D2C29; /* Texto cálido */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Botón de menú (icono) */
+#menuSecciones {
+  color: #D77A61; /* Color cálido para el icono */
+}
+
+#menuSecciones:hover {
+  background-color: #F4A261; /* Fondo cálido al pasar el mouse */
+}
+
+/* Botón de inicio */
+#menuInicio, #menuProducto {
+  color: #FFF;
+  background-color: #D77A61;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 0 10px;
+  transition: background-color 0.3s ease;
+}
+
+#menuInicio:hover, #menuProducto:hover {
+  background-color: #F4A261;
+}
+
+/* Estilo del span (título de la página) */
+mat-toolbar span {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #5C4033;
+  margin-right: 20px;
+}
+
+/* Espaciador */
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+/* Icono del carrito de compras */
+.favorite-icon {
+  color: #D77A61;
+}
+
+.favorite-icon:hover {
+  background-color: #F4A261;
+}
+
+/* Menú desplegable */
+mat-menu {
+  background-color: #FAF3E0; /* Fondo cálido */
+  color: #5C4033; /* Texto cálido */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+/* Botones dentro del menú desplegable */
+mat-menu button {
+  color: #5C4033;
+  font-weight: bold;
+}
+
+mat-menu button:hover {
+  background-color: #E9C46A;
+}
+
+/* Icono de persona (perfil) */
+mat-icon {
+  color: #000000;
+}
+
+/* Botón de modo oscuro */
+#label_toggle {
+  font-size: 1.5rem;
+  color: #D77A61;
+  cursor: pointer;
+}
+
+#label_toggle:hover {
+  color: #F4A261;
+}
+
+/* Checkbox para el toggle */
+#toggle {
+  display: none;
+}
+
+#toggle:checked + #label_toggle {
+  color: #2A9D8F; /* Color para indicar el cambio */
+}
+
+
+
+img{
+width: 64px;
+}

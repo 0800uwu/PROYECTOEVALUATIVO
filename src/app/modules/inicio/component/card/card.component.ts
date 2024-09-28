@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 //IMPORTAMOS LA INTERFAZ PARA CIUDAD
 import { Mueble } from 'src/app/models/muebles';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-card',
@@ -39,7 +40,23 @@ constructor() {
     ];
 }
 comprar() {
-  alert('¡DEBES INICIAR SESION PARA PODER COMPRAR!');
+  Swal.fire({
+    title: "¡Registrate primero!🤓☝",
+    showClass: {
+      popup: `
+        animate__animated
+        animate__fadeInUp
+        animate__faster
+      `
+    },
+    hideClass: {
+      popup: `
+        animate__animated
+        animate__fadeOutDown
+        animate__faster
+      `
+    }
+  });
 }
 
 }

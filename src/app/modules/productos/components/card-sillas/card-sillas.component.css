@@ -1,0 +1,104 @@
+/* Estilos para las tarjetas de productos */
+.card {
+    background-color: #FFF3E2; /* Fondo suave */
+    border: 1px solid #E0C3A1; /* Borde cálido */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 18rem;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen dentro de las tarjetas */
+.card-img-top {
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+    max-height: 200px;
+}
+
+/* Título del producto */
+.card-title {
+    color: #5C4033; /* Texto cálido */
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Precio del producto */
+.card-text {
+    color: #3D2C29;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Botón para ver más */
+.btn-outline-primary {
+    color: #D77A61;
+    border-color: #D77A61;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background-color: #D77A61;
+    color: #FFF;
+}
+
+/* Modal para detalles de productos */
+.modal-content {
+    background-color: #FAF3E0; /* Fondo suave */
+    color: #3D2C29; /* Texto oscuro */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    background-color: #E9C46A; /* Color cálido para el encabezado */
+    color: #5C4033; /* Texto */
+    border-bottom: none;
+    border-radius: 10px 10px 0 0;
+}
+
+.modal-header .modal-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.modal-header .btn-close {
+    background-color: #D77A61;
+}
+
+/* Imagen dentro del modal */
+.modal-body img {
+    border-radius: 10px;
+    max-width: 100px;
+    margin-bottom: 15px;
+}
+
+/* Descripción del producto */
+.modal-body .mb-3 {
+    font-size: 1.1rem;
+    color: #3D2C29;
+}
+
+/* Botones dentro del modal */
+.modal-footer .btn-primary {
+    background-color: #D77A61;
+    border-color: #D77A61;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.modal-footer .btn-primary:hover {
+    background-color: #F4A261;
+}
+
+.modal-footer .btn-secondary {
+    background-color: #A67B5B;
+}
+
+.modal-footer .btn-secondary:hover {
+    background-color: #805E45;
+}

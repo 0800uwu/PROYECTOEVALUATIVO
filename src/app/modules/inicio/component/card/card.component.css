@@ -66,3 +66,142 @@
       margin-bottom: 1rem;
     }
   }
+
+
+
+  /* Estilos generales para el contenedor */
+.container {
+  background-color: #FAF3E0; /* Fondo cálido */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 1200px;
+  text-align: center;
+}
+
+/* Estilos para el título */
+h1 {
+  font-size: 2.5rem;
+  color: #D77A61; /* Color cálido */
+  margin: 40px 0;
+  text-transform: uppercase;
+}
+
+/* Estilos para el carrusel */
+.carousel-item img {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-height: 500px;
+  object-fit: cover;
+}
+
+.carousel-control-prev-icon, 
+.carousel-control-next-icon {
+  background-color: #D77A61; /* Controles cálidos */
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.carousel-indicators button {
+  background-color: #E9C46A; /* Indicadores en tono cálido */
+  border-radius: 50%;
+}
+
+.carousel-indicators .active {
+  background-color: #F4A261; /* Indicador activo */
+}
+
+/* Estilos para las cards */
+.contenido {
+  margin-bottom: 40px;
+}
+
+.example-card {
+  background-color: #FFF3E2; /* Fondo suave */
+  border: 1px solid #E0C3A1; /* Borde suave */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.example-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+mat-card-title {
+  color: #5C4033; /* Texto cálido */
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+mat-card-subtitle {
+  color: #A67B5B;
+  font-size: 1rem;
+}
+
+mat-card-image {
+  border-radius: 10px;
+  max-height: 300px;
+  object-fit: cover;
+  margin-top: 10px;
+}
+
+mat-card-content p {
+  color: #3D2C29;
+  font-size: 1.2rem;
+  margin-top: 15px;
+}
+
+/* Estilos para los botones */
+mat-card-actions button {
+  background-color: #D77A61;
+  color: #FFF;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+mat-card-actions button:hover {
+  background-color: #F4A261;
+}
+
+
+
+
+
+/* Estilo para la banda de ofertas */
+.offer-marquee {
+  background-color: #F4A261; /* Color de fondo */
+  color: white; /* Color del texto */
+  padding: 10px 0; /* Espaciado vertical */
+  overflow: hidden; /* Ocultar el contenido que se desborda */
+  position: relative; /* Necesario para el posicionamiento */
+  white-space: nowrap; /* Evita que el texto se divida en múltiples líneas */
+}
+
+/* Contenedor del texto en movimiento */
+.offer-text {
+  display: inline-block; /* Hace que el texto se muestre en línea */
+  padding-left: 100%; /* Espacio inicial para la animación */
+  animation: marquee 15s linear infinite; /* Animación de desplazamiento */
+}
+
+/* Animación de desplazamiento */
+@keyframes marquee {
+  0% {
+      transform: translateX(0); /* Comienza en la posición original */
+  }
+  100% {
+      transform: translateX(-100%); /* Mueve el texto fuera del viewport */
+  }
+}
+
+/* Estilo para las ofertas */
+.offer-item {
+  margin-right: 50px; /* Espaciado entre ofertas */
+  font-weight: bold; /* Negrita para destacar */
+}

@@ -18,3 +18,84 @@ footer {
   footer .fab {
     font-size: 1.5rem;
   }
+
+
+
+
+
+
+
+
+
+  /* Estilos generales para el footer */
+footer {
+  background-color: #2A3D45; /* Fondo oscuro, cálido */
+  color: #FAF3E0; /* Texto claro, suave */
+  padding: 20px 0; /* Espaciado para una mejor presentación */
+  border-top: 5px solid #F4A261; /* Detalle de color cálido en la parte superior */
+}
+
+/* Estilos para las secciones dentro del footer */
+footer h5 {
+  color: #E9C46A; /* Color cálido para los títulos */
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+footer p {
+  color: #FAF3E0; /* Texto relajante */
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+footer ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+footer ul li {
+  color: #FAF3E0;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+/* Estilos para los iconos de redes sociales */
+footer a {
+  color: #FAF3E0;
+  font-size: 1.5rem;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #F4A261; /* Color cálido al hacer hover */
+}
+
+/* Estilo para la ubicación y horarios */
+footer .col-md-4 p {
+  margin-bottom: 5px;
+}
+
+footer .list-unstyled {
+  margin-bottom: 10px;
+}
+
+/* Texto de copyright en el centro */
+footer .text-center {
+  margin-top: 20px;
+  font-size: 0.8rem;
+  color: #E9C46A;
+  border-top: 1px solid #F4A261;
+  padding-top: 15px;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+  footer .col-md-4 {
+      margin-bottom: 20px;
+  }
+
+  footer .text-center {
+      font-size: 0.7rem;
+  }
+}
