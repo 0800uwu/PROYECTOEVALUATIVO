@@ -1,12 +1,41 @@
 /* Estilos generales */
-.carousel {
-    margin-bottom: 2rem;
-  }
+   
+    .carousel-item img {
+      object-fit: cover; /* Asegura que las imágenes ocupen toda el área */
+      height: 500px; /* Ajusta la altura del carrusel */
+      margin-bottom: 2rem;
+    }
+    
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      filter: invert(1); /* Cambia el color de los íconos a blanco */
+    }
+  
   
   h1 {
     text-align: center;
-    margin-top: 10px; 
-    margin-bottom: 2rem;
+  
+    font-size: 3rem; /* Tamaño de fuente */
+  color: #2F4F4F; /* Color del texto */
+  animation: movimientoRebote 2s infinite ease-in-out; /* Animación */
+  }
+
+  @keyframes movimientoRebote {
+    0% {
+      transform: translateY(0); /* Posición inicial */
+    }
+    25% {
+      transform: translateY(-10px); /* Sube */
+    }
+    50% {
+      transform: translateY(0); /* Vuelve al centro */
+    }
+    75% {
+      transform: translateY(20px); /* Baja */
+    }
+    100% {
+      transform: translateY(0); /* Posición inicial */
+    }
   }
   
   .container {

@@ -6,7 +6,9 @@ import { AuthService } from '../../services/auth.service';
 import { FirestoreService } from 'src/app/modules/shared/services/firestore.service';
 // Servicio de rutas que otorga Angular
 import { Router } from '@angular/router';
-
+// Importamos paquetería de criptación
+import * as CryptoJS from 'crypto-js';
+// Importamos paquetería de SweetAlert para alertas personalizadas
 import Swal from 'sweetalert2';
 
 @Component({
@@ -24,7 +26,7 @@ export class RegistroComponent {
     nombre: '',
     apellido: '',
     email: '',
-    rol: '',
+    rol: 'vis', // -> designamos un rol por defecto para los usuarios que se registren
     password: ''
   }
 
@@ -40,6 +42,8 @@ export class RegistroComponent {
 
   // FUNCIÓN ASINCRONICA PARA EL REGISTRO
   async registrar(){
+    // CREDENCIALES = información que ingrese el usuario
+  
     const credenciales = {
       email: this.usuarios.email,
       password: this.usuarios.password
@@ -49,7 +53,11 @@ export class RegistroComponent {
     const res = await this.servicioAuth.registrar(credenciales.email, credenciales.password)
     // El método THEN nos devuelve la respuesta esperada por la promesa
     .then(res => {
-      Swal.fire('¡Se ha logueado con éxito!');
+      Swal.fire({
+        title: "¡Buen trabajo!",
+        text: "¡Se pudo registrar con éxito! :)",
+        icon: "success"
+      });
 
       // Accedemos al servicio de rutas -> método navigate
       // método NAVIGATE = permite dirigirnos a diferentes vistas
@@ -58,9 +66,9 @@ export class RegistroComponent {
     // El método CATCH toma una falla y la vuelve un ERROR
     .catch(error => {
       Swal.fire({
-        icon: "error",
-        title: "Oops...",
-        text: "algo salio mal durante el registro!",
+        title: "¡Oh no!",
+        text: "Hubo un problema al registrar el nuevo usuario :(",
+        icon: "error"
       });
     })
 
@@ -68,6 +76,16 @@ export class RegistroComponent {
 
     this.usuarios.uid = uid;
 
+    // ENCRIPTACIÓN DE LA CONTRASEÑA DE USUARIO
+    /**
+     * SHA-256: Es un algoritmo de hashing seguro que toma una entrada (en este caso la
+     * contraseña) y produce una cadena de caracteres HEXADECIMAL que representa su HASH
+     * 
+     * toString(): Convierte el resultado del hash en una cadena de caracteres legible
+     */
+    this.usuarios.password = CryptoJS.SHA256(this.usuarios.password).toString();
+
+    // this.guardarUsuario() guardaba la información del usuario en la colección
     this.guardarUsuario();
 
     // Llamamos a la función limpiarInputs() para que se ejecute
@@ -92,7 +110,7 @@ export class RegistroComponent {
       nombre: this.usuarios.nombre = '',
       apellido: this.usuarios.apellido = '',
       email: this.usuarios.email = '',
-      rol: this.usuarios.rol = '',
+      rol: this.usuarios.rol = 'vis',
       password: this.usuarios.password = ''
     }
   }

@@ -1,0 +1,53 @@
+/* General styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FAF3E0; /* Suave para el fondo */
+}
+
+.section-sobre-nosotros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #E9C46A; /* Color cálido para la sección */
+    color: #5C4033; /* Texto oscuro para contraste */
+    border-radius: 10px; /* Bordes redondeados para suavidad */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+.section-sobre-nosotros h5 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #5C4033; /* Resaltar títulos */
+    text-align: center;
+}
+
+.section-sobre-nosotros p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #5C4033;
+    text-align: justify;
+}
+
+/* Card-style columns */
+.section-sobre-nosotros .col-md-4 {
+    background-color: #E0C3A1; /* Fondo suave para las columnas */
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Ligera profundidad */
+    flex: 1;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .section-sobre-nosotros {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .section-sobre-nosotros .col-md-4 {
+        margin-bottom: 20px;
+    }
+}
